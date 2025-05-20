@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "sqlServerName": {
+      "value": "dmssqlserver-presentation"
+    },
+    "location": {
+      "value": "Poland Central"
+    },
+    "databaseName": {
+      "value": "DMSDatabase-Presentation"
+    },
+    "administratorLogin": {
+      "value": "sqladmin"
+    },
+    "administratorLoginPassword": {
+      "value": "YourStrongPasswordHere123!"
+    },
+    "databaseEdition": {
+      "value": "Basic"
+    },
+    "databaseTier": {
+      "value": "Basic"
+    },
+    "databaseCapacity": {
+      "value": 5
+    },
+    "maxSizeBytes": {
+      "value": 1073741824
+    },
+    "zoneRedundant": {
+      "value": false
+    },
+    "enableAuditing": {
+      "value": false
+    },
+    "enableAdvancedThreatProtection": {
+      "value": false
+    },
+    "enableTransparentDataEncryption": {
+      "value": true
+    },
+    "allowAzureServices": {
+      "value": true
+    },
+    "ipAddressRules": {
+      "value": [
+        {
+          "name": "DemoPresentation",
+          "startIpAddress": "0.0.0.0",
+          "endIpAddress": "0.0.0.0"
+        }
+      ]
+    }
+  }
+}

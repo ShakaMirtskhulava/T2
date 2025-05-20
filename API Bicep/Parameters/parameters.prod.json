@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "appName": {
+      "value": "distribo-api"
+    },
+    "subscriptionId": {
+      "value": "fakeSubscriptionId"
+    },
+    "createAppServicePlan": {
+      "value": true
+    },
+    "appServicePlanName": {
+      "value": "distribo-plan-prod"
+    },
+    "appServicePlanSku": {
+      "value": "P1V2"
+    },
+    "appServicePlanTier": {
+      "value": "PremiumV2"
+    },
+    "location": {
+      "value": "Poland Central"
+    },
+    "containerImage": {
+      "value": "akoscontainers/oms-api:latest"
+    },
+    "usePrivateDockerRegistry": {
+      "value": true
+    },
+    "dockerRegistryServerUrl": {
+      "value": "https://index.docker.io"
+    },
+    "dockerRegistryUsername": {
+      "value": "YOUR-DOCKER-USERNAME"
+    },
+    "dockerRegistryPassword": {
+      "value": "YOUR-DOCKER-PASSWORD"
+    },
+    "alwaysOn": {
+      "value": true
+    },
+    "corsAllowedOrigins": {
+      "value": [
+        "https://www.kjkszpj.life",
+        "https://kjkszpj.life"
+      ]
+    },
+    "httpsOnly": {
+      "value": true
+    },
+    "minTlsVersion": {
+      "value": "1.2"
+    },
+    "clientCertEnabled": {
+      "value": true
+    },
+    "clientCertMode": {
+      "value": "Required"
+    }
+  }
+}

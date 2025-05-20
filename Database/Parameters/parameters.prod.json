@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "sqlServerName": {
+      "value": "dmssqlserver-prod"
+    },
+    "location": {
+      "value": "Poland Central"
+    },
+    "databaseName": {
+      "value": "DMSDatabase"
+    },
+    "administratorLogin": {
+      "value": "sqladmin"
+    },
+    "administratorLoginPassword": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/YOUR-SUBSCRIPTION-ID/resourceGroups/KeyVault-RG/providers/Microsoft.KeyVault/vaults/YourKeyVault"
+        },
+        "secretName": "sqlServerAdminPassword"
+      }
+    },
+    "databaseEdition": {
+      "value": "Standard"
+    },
+    "databaseTier": {
+      "value": "Standard"
+    },
+    "databaseCapacity": {
+      "value": 20
+    },
+    "maxSizeBytes": {
+      "value": 10737418240
+    },
+    "zoneRedundant": {
+      "value": true
+    },
+    "enableAuditing": {
+      "value": true
+    },
+    "enableAdvancedThreatProtection": {
+      "value": true
+    },
+    "enableTransparentDataEncryption": {
+      "value": true
+    },
+    "allowAzureServices": {
+      "value": true
+    },
+    "ipAddressRules": {
+      "value": []
+    }
+  }
+}

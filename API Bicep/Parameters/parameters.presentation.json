@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "appName": {
+      "value": "distribo-api-presentation"
+    },
+    "subscriptionId": {
+      "value": "fakeSubscriptionId"
+    },
+    "createAppServicePlan": {
+      "value": true
+    },
+    "appServicePlanName": {
+      "value": "distribo-plan-presentation"
+    },
+    "appServicePlanSku": {
+      "value": "F1"
+    },
+    "appServicePlanTier": {
+      "value": "Free"
+    },
+    "location": {
+      "value": "Poland Central"
+    },
+    "containerImage": {
+      "value": "akoscontainers/oms-api:test"
+    },
+    "usePrivateDockerRegistry": {
+      "value": true
+    },
+    "dockerRegistryServerUrl": {
+      "value": "https://index.docker.io"
+    },
+    "dockerRegistryUsername": {
+      "value": "akoscontainers"
+    },
+    "dockerRegistryPassword": {
+      "value": "Ilikekma1!"
+    },
+    "alwaysOn": {
+      "value": false
+    },
+    "corsAllowedOrigins": {
+      "value": [
+        "http://localhost:4200"
+      ]
+    },
+    "httpsOnly": {
+      "value": true
+    },
+    "minTlsVersion": {
+      "value": "1.2"
+    }
+  }
+}
